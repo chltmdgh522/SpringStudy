@@ -1,7 +1,9 @@
 package study.core.discount;
 
+import org.springframework.stereotype.Component;
 import study.core.member.Grade;
 import study.core.member.Member;
+
 
 public class FixDiscountPolicy implements DiscountPolicy{
 
