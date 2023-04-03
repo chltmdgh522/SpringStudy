@@ -10,28 +10,26 @@ import study.core.member.MemoryMemberRepository;
 
 @Component
 public class OrderServiceImpl implements OrderService {
+
     private MemberRepository memberRepository;
     private DiscountPolicy discountPolicy;
-
-    @Autowired(required = false) //선택적으로 넣어줌
+   @Autowired(required = false) //선택적으로 넣어줌
     public void setMemberRepository(MemberRepository memberRepository) {
         System.out.println("2");
         this.memberRepository = memberRepository;
     }
-
-
     @Autowired
-    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+    public void setDiscountPolicy(DiscountPolicy rateDiscountPolicy) {
         System.out.println("3");
-        this.discountPolicy = discountPolicy;
+        this.discountPolicy = rateDiscountPolicy;
     }
-
-
+    @Autowired //생성자 1개 있을 때 생략가능
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         System.out.println("1");
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
+
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import study.core.member.Grade;
 import study.core.member.Member;
 
-
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
 
     int discountFixAccount=1000;

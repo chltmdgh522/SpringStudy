@@ -9,6 +9,7 @@ public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
     @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
+        System.out.println("11");
         this.memberRepository = memberRepository;
     }
 

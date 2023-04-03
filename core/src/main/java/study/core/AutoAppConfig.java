@@ -16,8 +16,8 @@ import study.core.member.MemoryMemberRepository;
 )
 public class AutoAppConfig {
 
-    @Bean("memoryMemberRepository")
+    /*@Bean("memoryMemberRepository")
     public MemberRepository memberRepository(){
         return new MemoryMemberRepository();
-    }
+    }*/
 }
