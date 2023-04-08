@@ -11,16 +11,14 @@ import lombok.ToString;
 @RequiredArgsConstructor //final 붙인 생성자를 만들어줌
 // OrderServiceImpl 참고 많이 사용한다고 함
 public class HelloLombok {
-
-
     private String name;
     private  int age;
 
     public static void main(String[] args) {
-        HelloLombok helloLombok=new HelloLombok();
-        helloLombok.setName("chltmdgh");
+        final HelloLombok helloLombok;
+        //helloLombok.setName("chltmdgh");
 
-        System.out.println("helloLombok = " + helloLombok);
+        //System.out.println("helloLombok = " + helloLombok);
 
 
     }

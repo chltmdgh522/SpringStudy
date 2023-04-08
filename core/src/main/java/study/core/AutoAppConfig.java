@@ -11,6 +11,8 @@ import study.core.member.MemoryMemberRepository;
 @Configuration
 @ComponentScan(
        // basePackages = "study.core.member",
+        basePackages = "study.core.member", //이렇게 하면 member만 돌아간다 패키지 지정
+        basePackageClasses = AutoAppConfig.class,
         excludeFilters = @ComponentScan.Filter(type=FilterType.ANNOTATION,classes = Configuration.class)
 
 )
